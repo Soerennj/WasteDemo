@@ -19,8 +19,9 @@
                 <GridPane fx:id="gridPeriodSelection" alignment="CENTER" prefHeight="78.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="84.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.0" minWidth="10.0" prefWidth="97.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.0" minWidth="10.0" prefWidth="321.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.0" minWidth="10.0" prefWidth="87.33333333333334" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.0" minWidth="10.0" prefWidth="106.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.0" minWidth="10.0" prefWidth="262.3333333333333" />
                     </columnConstraints>
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -36,6 +37,7 @@
                         <RadioButton fx:id="btnWeek" mnemonicParsing="false" text="Week" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <RadioButton fx:id="btnMonth" mnemonicParsing="false" text="Month" GridPane.columnIndex="2" />
                         <RadioButton fx:id="btnYear" mnemonicParsing="false" text="Year" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cBoxSpecific" prefWidth="150.0" promptText="Select Specific" GridPane.columnIndex="3" />
                     </children>
                 </GridPane>
             </bottom>

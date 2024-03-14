@@ -7,9 +7,6 @@
     <list default="true" id="a20ae6cd-c50d-409b-a7d8-cfb1bfea3bf3" name="Changes" comment="Permission test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/LinechartUge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/WeekLineChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/MonthlyLineChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/MonthLineChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/YearlyLineChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/YearLineChart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wastedemo/applicationWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wastedemo/applicationWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +44,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "controller-modification",
+    "git-widget-placeholder": "SpecificData",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
