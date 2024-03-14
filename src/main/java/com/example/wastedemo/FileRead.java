@@ -6,7 +6,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FileRead {
+public class FileRead extends TrashEntry{
 
     static int activeInfo = 0;
     static int trashID = 0;
@@ -14,15 +14,11 @@ public class FileRead {
     static double weight = 0.0;
 
 
-    static ArrayList<TrashEntry> alSonderborg = new ArrayList<>();
-    static ArrayList<TrashEntry> alRodekro = new ArrayList<>();
-    static ArrayList<TrashEntry> alKliplev = new ArrayList<>();
+    public static ArrayList<TrashEntry> alSonderborg = new ArrayList<>();
+    public static ArrayList<TrashEntry> alRodekro = new ArrayList<>();
+    public static ArrayList<TrashEntry> alKliplev = new ArrayList<>();
 
     public static void main(String[] args) {
-
-        ArrayList<TrashEntry> alSonderborg = new ArrayList<>();
-        ArrayList<TrashEntry> alRodekro = new ArrayList<>();
-        ArrayList<TrashEntry> alKliplev = new ArrayList<>();
 
         try {
 
@@ -33,8 +29,6 @@ public class FileRead {
                 String nextline = out.nextLine();
 
                 determineData(nextline);
-
-                System.out.println(hasNumbers(nextline));
 
                 if (hasNumbers(nextline)) {
                     switch (activeInfo) {
@@ -52,7 +46,10 @@ public class FileRead {
 
             }
 
-
+            for (TrashEntry o : alSonderborg
+                 ) {
+                System.out.println(o.time);
+            }
             out.close();
 
         } catch (
@@ -98,6 +95,11 @@ public class FileRead {
 
     static public ArrayList getSonderborg()
     {
+        getStats();
+        for (TrashEntry o: alSonderborg
+             ) {
+            System.out.println(o.getTime() + "  :   " + o.getWeight());
+        }
         return alSonderborg;
     }
     static public ArrayList getKliplev()
@@ -107,5 +109,45 @@ public class FileRead {
     static public ArrayList getRodekro()
     {
         return alRodekro;
+    }
+    static public void getStats()
+    {
+        try {
+
+            File file = new File("./demo.txt");
+            Scanner out = new Scanner(file);
+
+            while (out.hasNextLine()) {
+                String nextline = out.nextLine();
+
+                determineData(nextline);
+
+                if (hasNumbers(nextline)) {
+                    switch (activeInfo) {
+                        case 1:
+                            alSonderborg.add(new TrashEntry("Sønderborg", trashID, time, weight));
+                            break;
+                        case 2:
+                            alKliplev.add(new TrashEntry("Kliplev", trashID, time, weight));
+                            break;
+                        case 3:
+                            alRodekro.add(new TrashEntry("Rødekro", trashID, time, weight));
+                            break;
+                    }
+                }
+
+            }
+
+            for (TrashEntry o: alSonderborg
+            ) {
+                System.out.println("Test: " + o.getTime() + ": " + o.getWeight());
+            }
+            out.close();
+
+        } catch (
+                FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 }
