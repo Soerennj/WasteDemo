@@ -2,6 +2,7 @@ package com.example.wastedemo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,6 +12,11 @@ public class FileRead {
     static int trashID = 0;
     static String time = "";
     static double weight = 0.0;
+
+
+    static ArrayList<TrashEntry> alSonderborg = new ArrayList<>();
+    static ArrayList<TrashEntry> alRodekro = new ArrayList<>();
+    static ArrayList<TrashEntry> alKliplev = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -43,7 +49,9 @@ public class FileRead {
                             break;
                     }
                 }
+
             }
+
 
             out.close();
 
@@ -86,5 +94,18 @@ public class FileRead {
 
     private static boolean hasNumbers(String line) {
         return line.matches(".*\\d.*");
+    }
+
+    static public ArrayList getSonderborg()
+    {
+        return alSonderborg;
+    }
+    static public ArrayList getKliplev()
+    {
+        return alKliplev;
+    }
+    static public ArrayList getRodekro()
+    {
+        return alRodekro;
     }
 }
