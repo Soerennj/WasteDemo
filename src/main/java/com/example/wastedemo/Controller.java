@@ -41,10 +41,14 @@ public class Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         displayPeriodGrid(false);
 
+
         cBoxDepartment.getItems().addAll("Department. A");
         cBoxSpecific.getItems().addAll("Day", "Week", "Month","Year");
 
         ComboBoxDepartment.getItems().addAll("Department. A");
+
+        ComboBoxDepartment.getItems().addAll("Sønderborg", "Rødekro", "Kliplev");
+
 
 
         ToggleGroup toggleGroup = new ToggleGroup();
@@ -55,8 +59,15 @@ public class Controller implements Initializable {
 
         ComboBoxDepartment.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
-                setLineChart(weekChart);
+                //setLineChart(dayChart);
                 displayPeriodGrid(true);
+                if (newValue.equals("Sønderborg")) {
+
+                } else if (newValue.equals("Rødekro")) {
+
+                } else if (newValue.equals("Kliplev")) {
+
+                }
             }
         });
 
