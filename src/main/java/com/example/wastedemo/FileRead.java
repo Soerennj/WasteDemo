@@ -46,10 +46,6 @@ public class FileRead extends TrashEntry{
 
             }
 
-            for (TrashEntry o : alSonderborg
-                 ) {
-                System.out.println(o.time);
-            }
             out.close();
 
         } catch (
@@ -96,18 +92,16 @@ public class FileRead extends TrashEntry{
     static public ArrayList getSonderborg()
     {
         getStats();
-        for (TrashEntry o: alSonderborg
-             ) {
-            System.out.println(o.getTime() + "  :   " + o.getWeight());
-        }
         return alSonderborg;
     }
     static public ArrayList getKliplev()
     {
+        getStats();
         return alKliplev;
     }
     static public ArrayList getRodekro()
     {
+        getStats();
         return alRodekro;
     }
     static public void getStats()
@@ -138,10 +132,6 @@ public class FileRead extends TrashEntry{
 
             }
 
-            for (TrashEntry o: alSonderborg
-            ) {
-                System.out.println("Test: " + o.getTime() + ": " + o.getWeight());
-            }
             out.close();
 
         } catch (
