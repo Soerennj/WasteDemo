@@ -7,7 +7,6 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
 public class DayLineChart extends LineChart<Number, Number> {
-
     ObservableList<Data<Number, Number>> dayData = FXCollections.observableArrayList();
     XYChart.Series<Number, Number> seriesData = new XYChart.Series<>(dayData);
 
@@ -17,7 +16,7 @@ public class DayLineChart extends LineChart<Number, Number> {
         this.getData().add(seriesData);
     }
 
-    public void addData(int day, double measurement) {
+    private void addData(int day, double measurement) {
         dayData.add(new XYChart.Data<>(day, measurement));
     }
 }
