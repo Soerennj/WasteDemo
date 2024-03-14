@@ -5,7 +5,6 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
@@ -21,23 +20,32 @@ public class Controller implements Initializable {
 
     @FXML
     private BorderPane borderPane;
-
     @FXML
+
     private ComboBox<String> cBoxDepartment;
     @FXML
     public ComboBox<String> cBoxSpecific;
 
+
+    private GridPane gridPane;
+
     @FXML
-    private GridPane gridPeriodSelection;
-    private WeekLineChart weekChart = new WeekLineChart();
-    private MonthLineChart monthChart = new MonthLineChart();
-    private YearLineChart yearChart = new YearLineChart();
+    private ComboBox<String> ComboBoxDepartment;
+
+    private final DayLineChart dayChart = new DayLineChart();
+    private final WeekLineChart weekChart = new WeekLineChart();
+    private final MonthLineChart monthChart = new MonthLineChart();
+    private final YearLineChart yearChart = new YearLineChart();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         displayPeriodGrid(false);
+
         cBoxDepartment.getItems().addAll("Department. A");
         cBoxSpecific.getItems().addAll("Day", "Week", "Month","Year");
+
+        ComboBoxDepartment.getItems().addAll("Department. A");
+
 
         ToggleGroup toggleGroup = new ToggleGroup();
         btnDay.setToggleGroup(toggleGroup);
@@ -45,7 +53,7 @@ public class Controller implements Initializable {
         btnMonth.setToggleGroup(toggleGroup);
         btnYear.setToggleGroup(toggleGroup);
 
-        cBoxDepartment.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+        ComboBoxDepartment.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 setLineChart(weekChart);
                 displayPeriodGrid(true);
@@ -54,6 +62,7 @@ public class Controller implements Initializable {
 
         toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue == btnDay) {
+
                 System.out.println("daily");
                 cBoxSpecific.setVisible(false);
             } else if (newValue == btnWeek) {
@@ -74,6 +83,15 @@ public class Controller implements Initializable {
                 cBoxSpecific.getItems().addAll(yearSpecific);
                 cBoxSpecific.setVisible(true);
                 System.out.println("yearly");
+
+                setLineChart(dayChart);
+            } else if (newValue == btnWeek) {
+                setLineChart(weekChart);
+            } else if (newValue == btnMonth) {
+                setLineChart(monthChart);
+            } else if (newValue == btnYear) {
+                setLineChart(yearChart);
+
             }
         });
 
@@ -81,7 +99,7 @@ public class Controller implements Initializable {
     }
 
     private void displayPeriodGrid(boolean display) {
-        gridPeriodSelection.setVisible(display);
+        gridPane.setVisible(display);
     }
 
     private void setLineChart(LineChart<Number, Number> lineChart) {
