@@ -8,8 +8,8 @@ import javafx.scene.chart.XYChart;
 
 public class DayLineChart extends LineChart<Number, Number> {
 
-    ObservableList<Data<Number, Number>> weekData = FXCollections.observableArrayList();
-    XYChart.Series<Number, Number> seriesData = new XYChart.Series<>(weekData);
+    ObservableList<Data<Number, Number>> dayData = FXCollections.observableArrayList();
+    XYChart.Series<Number, Number> seriesData = new XYChart.Series<>(dayData);
 
     public DayLineChart() {
         super(new NumberAxis(1,24,1), new NumberAxis(0,100,10));
@@ -18,6 +18,6 @@ public class DayLineChart extends LineChart<Number, Number> {
     }
 
     public void addData(int day, double measurement) {
-        weekData.add(new XYChart.Data<>(day, measurement));
+        dayData.add(new XYChart.Data<>(day, measurement));
     }
 }
