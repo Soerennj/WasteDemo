@@ -18,42 +18,6 @@ public class FileRead extends TrashEntry{
     public static ArrayList<TrashEntry> alRodekro = new ArrayList<>();
     public static ArrayList<TrashEntry> alKliplev = new ArrayList<>();
 
-    public static void main(String[] args) {
-
-        try {
-
-            File file = new File("./demo.txt");
-            Scanner out = new Scanner(file);
-
-            while (out.hasNextLine()) {
-                String nextline = out.nextLine();
-
-                determineData(nextline);
-
-                if (hasNumbers(nextline)) {
-                    switch (activeInfo) {
-                        case 1:
-                            alSonderborg.add(new TrashEntry("Sønderborg", trashID, time, weight));
-                            break;
-                        case 2:
-                            alKliplev.add(new TrashEntry("Kliplev", trashID, time, weight));
-                            break;
-                        case 3:
-                            alRodekro.add(new TrashEntry("Rødekro", trashID, time, weight));
-                            break;
-                    }
-                }
-
-            }
-
-            out.close();
-
-        } catch (
-                FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-    }
 
     private static void determineData(String info) {
         if (info.toLowerCase().contains("sønderborg")) {
