@@ -7,6 +7,11 @@
     <list default="true" id="a20ae6cd-c50d-409b-a7d8-cfb1bfea3bf3" name="Changes" comment="Permission test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/DayLineChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/DayLineChart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/MonthLineChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/MonthLineChart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/WeekLineChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/WeekLineChart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/YearLineChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/YearLineChart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +52,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "discoStu",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
