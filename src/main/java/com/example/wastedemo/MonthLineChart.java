@@ -6,13 +6,13 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
-public class MonthlyLineChart extends LineChart<Number, Number> {
+public class MonthLineChart extends LineChart<Number, Number> {
     ObservableList<XYChart.Data<Number, Number>> monthData = FXCollections.observableArrayList();
     XYChart.Series<Number, Number> seriesData = new XYChart.Series<>(monthData);
 
-    public MonthlyLineChart() {
-        super(new NumberAxis(0,31, 1), new NumberAxis(0,100, 10));
-        seriesData.setName("monthly data");
+    public MonthLineChart() {
+        super(new NumberAxis(1,31, 1), new NumberAxis(0,100, 10));
+        seriesData.setName("Waste");
         this.getData().add(seriesData);
     }
 

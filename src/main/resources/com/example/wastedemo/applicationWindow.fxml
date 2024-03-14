@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wastedemo.Controller">
     <children>
@@ -21,7 +14,7 @@
                 <Insets left="15.0" />
             </padding>
         </HBox>
-        <BorderPane fx:id="BorderPane" prefHeight="348.0" prefWidth="600.0">
+        <BorderPane fx:id="borderPane" prefHeight="348.0" prefWidth="600.0">
             <bottom>
                 <GridPane fx:id="gridPeriodSelection" alignment="CENTER" prefHeight="78.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                     <columnConstraints>
@@ -39,10 +32,10 @@
                     </BorderPane.margin>
                     <children>
                         <Label text="Timeframe:" />
-                        <RadioButton fx:id="btnDaily" mnemonicParsing="false" text="Daily" GridPane.columnIndex="1" />
-                        <RadioButton fx:id="btnWeekly" mnemonicParsing="false" text="Weekly" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <RadioButton fx:id="btnMonthly" mnemonicParsing="false" text="Monthly" GridPane.columnIndex="2" />
-                        <RadioButton fx:id="btnYearly" mnemonicParsing="false" text="Yearly" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <RadioButton fx:id="btnDay" mnemonicParsing="false" text="Day" GridPane.columnIndex="1" />
+                        <RadioButton fx:id="btnWeek" mnemonicParsing="false" text="Week" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <RadioButton fx:id="btnMonth" mnemonicParsing="false" text="Month" GridPane.columnIndex="2" />
+                        <RadioButton fx:id="btnYear" mnemonicParsing="false" text="Year" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                     </children>
                 </GridPane>
             </bottom>
