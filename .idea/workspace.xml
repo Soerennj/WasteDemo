@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a20ae6cd-c50d-409b-a7d8-cfb1bfea3bf3" name="Changes" comment="Permission test">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wastedemo/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -69,7 +69,7 @@
       <updated>1710238996728</updated>
       <workItem from="1710238997835" duration="798000" />
       <workItem from="1710240026875" duration="290000" />
-      <workItem from="1710404830467" duration="330000" />
+      <workItem from="1710404830467" duration="1288000" />
     </task>
     <servers />
   </component>

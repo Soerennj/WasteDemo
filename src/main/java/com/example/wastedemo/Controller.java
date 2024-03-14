@@ -44,6 +44,9 @@ public class Controller implements Initializable {
         btnYearly.setToggleGroup(toggleGroup);
 
         cBoxDepartment.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            switch (newValue) {
+
+            }
             if (newValue != null) {
                 System.out.println("you selected something");
                 MonthlyLineChart test = new MonthlyLineChart();
