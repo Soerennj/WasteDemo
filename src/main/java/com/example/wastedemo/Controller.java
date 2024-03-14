@@ -30,7 +30,8 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         displayPeriodGrid(false);
-        ComboBoxDepartment.getItems().addAll("Department. A");
+
+        ComboBoxDepartment.getItems().addAll("Sønderborg", "Rødekro", "Kliplev");
 
         ToggleGroup toggleGroup = new ToggleGroup();
         btnDay.setToggleGroup(toggleGroup);
@@ -40,8 +41,15 @@ public class Controller implements Initializable {
 
         ComboBoxDepartment.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
-                setLineChart(weekChart);
+                //setLineChart(dayChart);
                 displayPeriodGrid(true);
+                if (newValue.equals("Sønderborg")) {
+
+                } else if (newValue.equals("Rødekro")) {
+
+                } else if (newValue.equals("Kliplev")) {
+
+                }
             }
         });
 

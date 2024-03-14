@@ -16,7 +16,7 @@ public class DayLineChart extends LineChart<Number, Number> {
         this.getData().add(seriesData);
     }
 
-    public void addData(int day, double measurement) {
+    private void addData(int day, double measurement) {
         dayData.add(new XYChart.Data<>(day, measurement));
     }
 }
