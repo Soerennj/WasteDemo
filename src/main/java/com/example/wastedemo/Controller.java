@@ -43,7 +43,7 @@ public class Controller implements Initializable {
 
 
         cBoxDepartment.getItems().addAll("Department. A");
-        cBoxSpecific.getItems().addAll("Day", "Week", "Month","Year");
+        cBoxSpecific.getItems().addAll( "Week", "Month","Year");
 
         ComboBoxDepartment.getItems().addAll("Department. A");
 
